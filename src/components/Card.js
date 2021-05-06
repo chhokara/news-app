@@ -1,9 +1,17 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, Image } from "react-native";
 const Card = () => {
   return (
     <View style={styles.card}>
-      <View style={styles.imageWrapper}></View>
+      <View style={styles.imageWrapper}>
+        <Image
+          source={{
+            uri:
+              "https://user-images.githubusercontent.com/16916934/27370350-c82d1c44-5679-11e7-9147-2e8adeb4c515.png",
+          }}
+          style={styles.image}
+        />
+      </View>
       <View style={styles.titleWrapper}>
         <Text>This is a dummy title</Text>
       </View>
@@ -15,6 +23,10 @@ const Card = () => {
 };
 
 const styles = StyleSheet.create({
+  image: {
+    width: "100%",
+    height: "100%",
+  },
   card: {
     backgroundColor: "#ffffff",
     height: 300,
