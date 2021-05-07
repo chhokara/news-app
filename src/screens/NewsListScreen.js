@@ -4,12 +4,11 @@ import Header from "../components/Header";
 import Card from "../components/Card";
 import { View, Text, StyleSheet } from "react-native";
 
-const NewsListScreen = () => {
+const NewsListScreen = ({ navigation }) => {
   return (
     <View>
-      <Header />
-      <Card />
-      <StatusBar style="auto" />
+      <Card navigation={navigation} />
+      <StatusBar style={styles.status} />
     </View>
   );
 };
