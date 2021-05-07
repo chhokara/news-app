@@ -4,7 +4,7 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 const Header = () => {
   return (
     <View style={styles.header}>
-      <Text style={styles.headerTitle}>New App</Text>
+      <Text style={styles.headerTitle}>News App</Text>
     </View>
   );
 };
@@ -17,10 +17,11 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
   },
   headerTitle: {
-    marginTop: 40,
+    marginTop: 25,
     textAlign: "center",
     fontSize: 20,
     color: Platform.OS === "ios" ? "#ffffff" : "#72bcd4",
+    fontFamily: "Ubuntu-Bold",
   },
 });
 

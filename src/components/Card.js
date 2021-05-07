@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
 const Card = () => {
   return (
     <View style={styles.card}>
@@ -13,10 +14,11 @@ const Card = () => {
         />
       </View>
       <View style={styles.titleWrapper}>
-        <Text>This is a dummy title</Text>
+        <Text style={styles.title}>Dummy title</Text>
+        <MaterialIcons name="favorite-border" size={24} color="#72bcd4" />
       </View>
       <View style={styles.descriptionWrapper}>
-        <Text>This is a dummy description</Text>
+        <Text style={styles.description}>This is a dummy description</Text>
       </View>
     </View>
   );
@@ -48,9 +50,21 @@ const styles = StyleSheet.create({
   titleWrapper: {
     height: "10%",
     paddingHorizontal: 15,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
   },
   descriptionWrapper: {
     paddingHorizontal: 15,
+  },
+  title: {
+    fontFamily: "Ubuntu-Bold",
+    fontSize: 20,
+  },
+  description: {
+    fontFamily: "Ubuntu",
+    fontSize: 15,
+    marginTop: 10,
   },
 });
 
