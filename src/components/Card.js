@@ -1,25 +1,24 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
-const Card = ({ navigation }) => {
+const Card = ({ navigation, image, title, description }) => {
   return (
     <TouchableOpacity onPress={() => navigation.navigate("NewsDetails")}>
       <View style={styles.card}>
         <View style={styles.imageWrapper}>
           <Image
             source={{
-              uri:
-                "https://user-images.githubusercontent.com/16916934/27370350-c82d1c44-5679-11e7-9147-2e8adeb4c515.png",
+              uri: image,
             }}
             style={styles.image}
           />
         </View>
         <View style={styles.titleWrapper}>
-          <Text style={styles.title}>Dummy title</Text>
+          <Text style={styles.title}>{title}</Text>
           <MaterialIcons name="favorite-border" size={24} color="#72bcd4" />
         </View>
         <View style={styles.descriptionWrapper}>
-          <Text style={styles.description}>This is a dummy description</Text>
+          <Text style={styles.description}>{description}</Text>
         </View>
       </View>
     </TouchableOpacity>
