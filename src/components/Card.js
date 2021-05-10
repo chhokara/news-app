@@ -14,11 +14,17 @@ const Card = ({ navigation, image, title, description }) => {
           />
         </View>
         <View style={styles.titleWrapper}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title}>
+            {title.length > 25 ? title.slice(0, 25) + "..." : title}
+          </Text>
           <MaterialIcons name="favorite-border" size={24} color="#72bcd4" />
         </View>
         <View style={styles.descriptionWrapper}>
-          <Text style={styles.description}>{description}</Text>
+          <Text style={styles.description}>
+            {description.length > 100
+              ? description.slice(0, 100) + "..."
+              : description}
+          </Text>
         </View>
       </View>
     </TouchableOpacity>

@@ -30,16 +30,13 @@ const HeaderLeft = () => {
 
 function HomeNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerLeft: () => <HeaderLeft /> }}>
+    <Stack.Navigator>
       <Stack.Screen
         name="NewsList"
         component={NewsListScreen}
         options={{
           title: "Top News",
-          headerTitleStyle: {
-            fontFamily: "Ubuntu-Bold",
-            textAlign: "center",
-          },
+          headerLeft: () => <HeaderLeft />,
         }}
       />
       <Stack.Screen
@@ -47,10 +44,6 @@ function HomeNavigator() {
         component={NewsDetailsScreen}
         options={{
           title: "News Details",
-          headerTitleStyle: {
-            fontFamily: "Ubuntu-Bold",
-            textAlign: "center",
-          },
         }}
       />
     </Stack.Navigator>
@@ -65,10 +58,6 @@ function FavoritesNavigator() {
         component={FavoritesScreen}
         options={{
           title: "Favorites",
-          headerTitleStyle: {
-            fontFamily: "Ubuntu-Bold",
-            textAlign: "center",
-          },
         }}
       />
     </Stack.Navigator>
@@ -105,10 +94,6 @@ function AboutNavigator() {
         component={AboutScreen}
         options={{
           title: "About",
-          headerTitleStyle: {
-            fontFamily: "Ubuntu-Bold",
-            textAlign: "center",
-          },
         }}
       />
     </Stack.Navigator>
