@@ -22,7 +22,7 @@ const FavoritesScreen = ({ navigation }) => {
           />
         )}
       />
-      <StatusBar style={styles.status} />
+      <StatusBar style="auto" />
     </View>
   );
 };

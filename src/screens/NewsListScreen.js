@@ -33,7 +33,7 @@ const NewsListScreen = ({ navigation }) => {
           />
         )}
       />
-      <StatusBar style={styles.status} />
+      <StatusBar style="auto" />
     </View>
   );
 };
