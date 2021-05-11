@@ -29,6 +29,7 @@ const NewsListScreen = ({ navigation }) => {
             title={item.title}
             description={item.description}
             image={item.urlToImage}
+            url={item.url}
           />
         )}
       />

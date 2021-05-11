@@ -1,10 +1,28 @@
+import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { useSelector } from "react-redux";
+import { View, Text, StyleSheet, FlatList } from "react-native";
+import Card from "../components/Card";
 
-const FavoritesScreen = () => {
+const FavoritesScreen = ({ navigation }) => {
+  const news = useSelector((state) => state.news);
+  const { favorites } = news;
   return (
     <View>
-      <Text>Favorites Screen</Text>
+      <FlatList
+        data={favorites}
+        keyExtractor={(item) => item.url}
+        renderItem={({ item }) => (
+          <Card
+            navigation={navigation}
+            title={item.title}
+            description={item.description}
+            image={item.urlToImage}
+            url={item.url}
+          />
+        )}
+      />
+      <StatusBar style={styles.status} />
     </View>
   );
 };

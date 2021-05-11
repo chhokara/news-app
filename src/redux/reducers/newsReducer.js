@@ -25,7 +25,7 @@ export default function (state = initialState, action) {
           favorites,
         };
       } else {
-        const article = state.articles.find(
+        const article = state.articles.articles.find(
           (article) => article.url === action.payload
         );
         return {
